@@ -17,6 +17,11 @@ export class AlunoViewComponent implements OnInit {
   };
 
   readonly fields: Array<PoPageDynamicDetailField> = [
+    { property: 'matricula', key: true, visible: true },
+    { property: 'name', label: 'Nome', visible: true  },
+    { property: 'endereco', label: 'Endereço', visible: true  },
+    { property: 'avatar', label: 'Avatar', visible: true  },
+    { property: 'createdAt',label: 'Dt Nascimento',  type: 'date' }/*
     { property: 'id', gridColumns: 2, key: true, divider: 'Dados pessoais' },
     { property: 'name', label: 'Nome', gridXlColumns: 4, gridLgColumns: 4 },
     {
@@ -35,7 +40,7 @@ export class AlunoViewComponent implements OnInit {
     },
     { property: 'street', divider: 'Endereço', label: 'Rua' },
     { property: 'city', label: 'Cidade' },
-    { property: 'country', label: 'País' },
+    { property: 'country', label: 'País' },*/
   ];
 
   public readonly breadcrumb: PoBreadcrumb = {
@@ -49,8 +54,8 @@ export class AlunoViewComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
-      this.title = params["id"]
-        ? `Visualizando ${this.title} ${params["id"]}`
+      this.title = params["matricula"]
+        ? `Visualizando ${this.title} ${params["matricula"]}`
         : 'Visualizando';
     });
   }

@@ -23,11 +23,12 @@ public readonly breadcrumb: PoBreadcrumb = {
   ]
 };
 
-public readonly fields: Array<PoPageDynamicEditField> = [
-  { property: 'id', key: true, visible: false },
-  { label: 'Descricao', property: 'Descricao' },
-  { label: 'Mês Refer&encia', property: 'Referencia', type: 'date' },
-  { label: 'Arquivo', property: 'Arquivo', type: 'date',divider: 'Arquivos' }
+readonly fields: Array<PoPageDynamicEditField> = [
+  { property: 'matricula', label: 'Matrícula', key: true },
+  { property: 'name', label: 'Nome' },
+  { property: 'endereco', label: 'Endereço' },
+  { property: 'avatar', label: 'Avatar' },
+  { property: 'createdAt', label: 'Dt Nascimento', type: 'date' },
 ];
 
 constructor(private activatedRoute: ActivatedRoute) {}

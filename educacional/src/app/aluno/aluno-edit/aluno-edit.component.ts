@@ -24,17 +24,17 @@ export class AlunoEditComponent implements OnInit {
   };
 
   public readonly fields: Array<PoPageDynamicEditField> = [
-    { property: 'id', key: true, visible: false },
+    { property: 'matricula', key: true, visible: false },
     { property: 'name', label: 'Nome',  },
-    { property: 'birthdate',label: 'Dt Nascimento',  type: 'date' },
+    { property: 'createdAt',label: 'Dt Nascimento',  type: 'date' },
   ];
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
-      this.title = params["id"]
-      ? `Alterando o usuário ${params["id"]}`
+      this.title = params["matricula"]
+      ? `Alterando o usuário ${params["matricula"]}`
       : this.title;
     });
   }

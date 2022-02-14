@@ -30,7 +30,7 @@ export class AlunoListComponent implements OnInit {
 
   title: string = "Alunos";
   detailedaluno: any;
-  apiAddress: string = "https://po-sample-api.herokuapp.com/v1/people";
+  apiAddress: string = "https://kl371.mocklab.io/json/1";
   quickSearchWidth: number = 3;
 
   pageCustomActions: Array<PoPageDynamicTableCustomAction> = [
@@ -53,8 +53,10 @@ export class AlunoListComponent implements OnInit {
   };
 
   readonly fields: Array<PoPageDynamicTableField> = [
-    { property: 'id', label: 'Identificador', key: true },
-    { property: 'name', label: 'Nome' },
-    { property: 'birthdate', label: 'Dt Nascimento', type: 'date' },
+    { property: 'matricula', key: true, visible: true },
+    { property: 'name', label: 'Nome', visible: true  },
+    { property: 'endereco', label: 'Endereço', visible: true  },
+    { property: 'avatar', label: 'Avatar', visible: false  },
+    { property: 'createdAt',label: 'Dt Nascimento',  type: 'date' },
   ];
 }
