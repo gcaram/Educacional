@@ -1,2 +1,2 @@
 # Educacional
-Microfrontend Educacional
+Microfrontend Educacional - Alunos
