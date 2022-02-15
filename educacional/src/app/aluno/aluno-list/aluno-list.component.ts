@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PoDynamicViewField, PoNavbarItem } from '@po-ui/ng-components';
 import { PoPageDynamicTableActions, PoPageDynamicTableCustomAction, PoPageDynamicTableCustomTableAction, PoPageDynamicTableField } from '@po-ui/ng-templates';
 
@@ -7,12 +7,16 @@ import { PoPageDynamicTableActions, PoPageDynamicTableCustomAction, PoPageDynami
   templateUrl: './aluno-list.component.html',
   styleUrls: ['./aluno-list.component.css']
 })
-export class AlunoListComponent implements OnInit {
+export class AlunoListComponent implements OnInit, OnDestroy {
 
   public items: Array<PoNavbarItem> = [];
 
   ngOnInit(): void {
     this.LoadItems();
+  }
+
+  ngOnDestroy(): void {
+    console.log('Method not implemented.');
   }
 
   public LoadItems() {

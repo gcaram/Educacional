@@ -29,7 +29,7 @@ module.exports = {
       library: { type: "module" },
 
       name: "medu",
-      filename: "remoteEntry.js",
+      filename: "educacional.js",
       exposes: {
           "./Module": "src/app/interop.module.ts",
         },
