@@ -16,7 +16,7 @@ export class AlunoListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log('Method not implemented.');
+    console.log('AlunoListComponent Method not implemented.');
   }
 
   public LoadItems() {
